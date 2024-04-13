@@ -54,6 +54,49 @@ export default class OseDataModelCharacterScores implements CharacterScores {
     18: 3,
   };
 
+  //---HYPERBOREA CUSTOM START---
+
+static strengthDamageMods = {
+    0: -2,
+    3: -2,
+    4: -1,
+    9: 0,  
+    13: 1,
+    17: 2,
+    18: 3,
+};
+
+  static strengthAttackMods = {
+    0: -2,
+    3: -2,
+    4: -1,
+    7: 0,
+    15: 1,
+    18: 2,
+  };
+
+  static dexAttackMods = {
+    0: -2,
+    3: -2,
+    4: -1,
+    7: 0,
+    13: 1,
+    17: 2,
+    18: 3,
+  };
+
+  static dexDefenseMods = {
+    0: -2,
+    3: -2,
+    4: -1,
+    7: 0,
+    15: 1,
+    18: 2,
+  };
+
+
+  //---HYPERBOREA CUSTOM END---
+
   /**
    * Capped modifiers, from -2 to 2.
    *
@@ -158,6 +201,8 @@ export default class OseDataModelCharacterScores implements CharacterScores {
       value: this.#str.value,
       bonus: this.#str.bonus,
       mod: this.#strMod,
+      atk: this.strAtkMod,
+      dmg: this.strDmgMod,
       od: this.#strOpenDoorsMod,
     };
   }
@@ -175,6 +220,22 @@ export default class OseDataModelCharacterScores implements CharacterScores {
       this.#str.value
     );
   }
+
+      // Getter for the strength attack modifier
+    get strAtkMod() {
+        return OseDataModelCharacterScores.valueFromTable(
+            OseDataModelCharacterScores.strengthAttackMods,
+            this.#str.value
+        );
+    }
+
+    // Getter for the strength damage modifier
+    get strDmgMod() {
+        return OseDataModelCharacterScores.valueFromTable(
+            OseDataModelCharacterScores.strengthDamageMods,
+            this.#str.value
+        );
+    }
 
   get #strOpenDoorsMod() {
     return OseDataModelCharacterScores.valueFromTable(
@@ -248,6 +309,7 @@ export default class OseDataModelCharacterScores implements CharacterScores {
       value: this.#dex.value,
       bonus: this.#dex.bonus,
       mod: this.#dexMod,
+      atk:this.#dexAtkMod,
       init: this.#dexInitMod,
     };
   }
@@ -262,6 +324,13 @@ export default class OseDataModelCharacterScores implements CharacterScores {
   get #dexMod() {
     return OseDataModelCharacterScores.valueFromTable(
       OseDataModelCharacterScores.standardAttributeMods,
+      this.#dex.value
+    );
+  }
+
+  get #dexAtkMod() {
+    return OseDataModelCharacterScores.valueFromTable(
+      OseDataModelCharacterScores.dexAttackMods,
       this.#dex.value
     );
   }
