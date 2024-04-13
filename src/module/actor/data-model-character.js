@@ -45,14 +45,14 @@ export default class OseDataModelCharacter extends foundry.abstract.DataModel {
           (a) => a.system.equipped
         ),
       ],
-      this.scores.dex.mod,
+      this.scores.dex.def,
       this.ac.mod
     );
 
     this.aac = new OseDataModelCharacterAC(
       true,
       getItemsOfActorOfType(this.parent, "armor", (a) => a.system.equipped),
-      this.scores.dex.mod,
+      this.scores.dex.def,
       this.aac.mod
     );
 

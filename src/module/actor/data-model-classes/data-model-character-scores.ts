@@ -310,6 +310,7 @@ static strengthDamageMods = {
       bonus: this.#dex.bonus,
       mod: this.#dexMod,
       atk:this.#dexAtkMod,
+      def: this.#dexDefMod, 
       init: this.#dexInitMod,
     };
   }
@@ -334,6 +335,13 @@ static strengthDamageMods = {
       this.#dex.value
     );
   }
+
+  get #dexDefMod() {
+  return OseDataModelCharacterScores.valueFromTable(
+    OseDataModelCharacterScores.dexDefenseMods,
+    this.#dex.value
+  );
+}
 
   get #dexInitMod() {
     return OseDataModelCharacterScores.valueFromTable(
