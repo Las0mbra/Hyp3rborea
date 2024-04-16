@@ -54,17 +54,15 @@ export default class OseDataModelCharacterScores implements CharacterScores {
     18: 3,
   };
 
-  //---HYPERBOREA CUSTOM START---
-
-static strengthDamageMods = {
+  static strengthDamageMods = {
     0: -2,
     3: -2,
     4: -1,
-    9: 0,  
+    9: 0,
     13: 1,
     17: 2,
     18: 3,
-};
+  };
 
   static strengthAttackMods = {
     0: -2,
@@ -93,9 +91,6 @@ static strengthDamageMods = {
     15: 1,
     18: 2,
   };
-
-
-  //---HYPERBOREA CUSTOM END---
 
   /**
    * Capped modifiers, from -2 to 2.
@@ -200,7 +195,7 @@ static strengthDamageMods = {
     return {
       value: this.#str.value,
       bonus: this.#str.bonus,
-      mod: this.#strMod,
+      mod: this.strAtkMod,
       atk: this.strAtkMod,
       dmg: this.strDmgMod,
       od: this.#strOpenDoorsMod,
@@ -214,28 +209,28 @@ static strengthDamageMods = {
     };
   }
 
-  get #strMod() {
+  get strMod() {
     return OseDataModelCharacterScores.valueFromTable(
       OseDataModelCharacterScores.standardAttributeMods,
       this.#str.value
     );
   }
 
-      // Getter for the strength attack modifier
-    get strAtkMod() {
-        return OseDataModelCharacterScores.valueFromTable(
-            OseDataModelCharacterScores.strengthAttackMods,
-            this.#str.value
-        );
-    }
+  // Getter for the strength attack modifier
+  get strAtkMod() {
+    return OseDataModelCharacterScores.valueFromTable(
+      OseDataModelCharacterScores.strengthAttackMods,
+      this.#str.value
+    );
+  }
 
-    // Getter for the strength damage modifier
-    get strDmgMod() {
-        return OseDataModelCharacterScores.valueFromTable(
-            OseDataModelCharacterScores.strengthDamageMods,
-            this.#str.value
-        );
-    }
+  // Getter for the strength damage modifier
+  get strDmgMod() {
+    return OseDataModelCharacterScores.valueFromTable(
+      OseDataModelCharacterScores.strengthDamageMods,
+      this.#str.value
+    );
+  }
 
   get #strOpenDoorsMod() {
     return OseDataModelCharacterScores.valueFromTable(
@@ -309,8 +304,8 @@ static strengthDamageMods = {
       value: this.#dex.value,
       bonus: this.#dex.bonus,
       mod: this.#dexMod,
-      atk:this.#dexAtkMod,
-      def: this.#dexDefMod, 
+      atk: this.#dexAtkMod,
+      def: this.#dexDefMod,
       init: this.#dexInitMod,
     };
   }
@@ -324,7 +319,7 @@ static strengthDamageMods = {
 
   get #dexMod() {
     return OseDataModelCharacterScores.valueFromTable(
-      OseDataModelCharacterScores.standardAttributeMods,
+      OseDataModelCharacterScores.dexAttackMods,
       this.#dex.value
     );
   }
@@ -337,11 +332,11 @@ static strengthDamageMods = {
   }
 
   get #dexDefMod() {
-  return OseDataModelCharacterScores.valueFromTable(
-    OseDataModelCharacterScores.dexDefenseMods,
-    this.#dex.value
-  );
-}
+    return OseDataModelCharacterScores.valueFromTable(
+      OseDataModelCharacterScores.dexDefenseMods,
+      this.#dex.value
+    );
+  }
 
   get #dexInitMod() {
     return OseDataModelCharacterScores.valueFromTable(
