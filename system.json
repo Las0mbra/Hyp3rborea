@@ -30,7 +30,7 @@
   "gridUnits": "ft",
   "url": "https://github.com/Las0mbra/Hyp3rborea",
   "manifest": "https://raw.githubusercontent.com/Las0mbra/Hyp3rborea/main/system.json",
-  "download": "-",
+  "download": "https://github.com/Las0mbra/Hyp3rborea/raw/main/system.zip",
   "bugs": "https://github.com/vttred/ose/issues",
   "flags": {
     "allowBugReporter": true
