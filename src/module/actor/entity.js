@@ -2,6 +2,7 @@ import OseItem from "../item/entity";
 
 import skipRollDialogCheck from "../helpers-behaviour";
 import OseDice from "../helpers-dice";
+import OseItem from "../item/entity";
 
 /**
  * Used in the rollAttack function to remove zeroes from rollParts arrays
