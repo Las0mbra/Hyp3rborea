@@ -29,7 +29,7 @@
   "gridDistance": 5,
   "gridUnits": "ft",
   "url": "https://github.com/Las0mbra/Hyp3rborea",
-  "manifest": "https://github.com/Las0mbra/Hyp3rborea/blob/main/system.json",
+  "manifest": "https://raw.githubusercontent.com/Las0mbra/Hyp3rborea/main/system.json",
   "download": "-",
   "bugs": "https://github.com/vttred/ose/issues",
   "flags": {
