@@ -5,6 +5,7 @@ export default class OseDataModelArmor extends foundry.abstract.DataModel {
   static ArmorTypes = {
     unarmored: "OSE.armor.unarmored",
     light: "OSE.armor.light",
+    medium: "OSE.armor.medium",
     heavy: "OSE.armor.heavy",
     shield: "OSE.armor.shield",
   };

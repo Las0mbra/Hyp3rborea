@@ -93,6 +93,7 @@ export const OSE = {
   armor: {
     unarmored: "OSE.armor.unarmored",
     light: "OSE.armor.light",
+    medium: "Medium",
     heavy: "OSE.armor.heavy",
     shield: "OSE.armor.shield",
   },

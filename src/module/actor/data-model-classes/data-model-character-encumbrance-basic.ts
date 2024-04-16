@@ -49,6 +49,7 @@ export default class OseDataModelCharacterEncumbranceBasic
   static armorWeight = {
     unarmored: 0,
     light: 1,
+    medium: 2,
     heavy: 2,
   };
 
