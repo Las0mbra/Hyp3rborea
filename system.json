@@ -1,7 +1,7 @@
 {
-  "name": "ose-dev",
-  "id": "ose-dev",
-  "title": "1",
+  "name": "Hyperborea 3e",
+  "id": "ose",
+  "title": "Hyperborea 3e",
   "description": "Beta test of Hyperborea 3e + House rules",
   "version": "0.2b",
   "minimumCoreVersion": "10",
@@ -19,7 +19,7 @@
       "url": ""
     },
     {
-      "name": "",
+      "name": "Hyperborea 3e",
       "url": ""
     }
   ],
