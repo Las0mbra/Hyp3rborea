@@ -37,10 +37,10 @@ export default class OseDataModelCharacterAC implements CharacterAC {
    * @param {number} dexMod - The bonus/penalty, from -3 to +3, applied to AC.
    * @param {number} mod - Miscellaneous modifier to AC
    */
-  constructor(isAscending = false, armor: Item[] = [], dexMod = 0, mod = 0) {
+  constructor(isAscending = false, armor: Item[] = [], dexDefMod = 0, mod = 0) {
     this.#isAscending = isAscending;
     this.#armor = armor;
-    this.#dexMod = dexMod;
+    this.#dexMod = dexDefMod;
     this.#mod = mod;
     this.#acProp = this.#isAscending
       ? OseDataModelCharacterAC.propAscending

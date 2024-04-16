@@ -1,9 +1,9 @@
 {
-  "name": "ose-dev",
-  "id": "ose-dev",
-  "title": "Old-School Essentials Development Build",
-  "description": "Simple, robust rules compatible with decades of Basic/Expert material",
-  "version": "AUTOMATICALLY REPLACED BY GITHUB WORKFLOW ACTION",
+  "name": "Hyperborea 3e",
+  "id": "ose",
+  "title": "Hyperborea 3e",
+  "description": "Beta test of Hyperborea 3e + House rules",
+  "version": "0.2b",
   "minimumCoreVersion": "10",
   "compatibleCoreVersion": "11",
   "compatibility": {
@@ -11,16 +11,16 @@
     "verified": "11",
     "maximum": "11"
   },
-  "author": "Maintained by VTT Red with 18 contributors",
+  "author": "Laso",
   "authors": [
     {
-      "name": "VTT RED",
-      "email": "ose-system@vtt.red",
-      "url": "https://vtt.red"
+      "name": "Laso",
+      "email": "",
+      "url": ""
     },
     {
-      "name": "and 18 other contributors",
-      "url": "https://github.com/vttred/ose#contributors-"
+      "name": "Hyperborea 3e",
+      "url": ""
     }
   ],
   "esmodules": [
